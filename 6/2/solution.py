@@ -1,6 +1,5 @@
 from functools import lru_cache
 
-
 INPUT_FILE = "input.txt"
 
 
@@ -8,6 +7,7 @@ def read_input() -> list[int]:
     with open(INPUT_FILE, "r") as f:
         lines = f.readlines()
     return [int(num) for num in lines[0].strip().split(",")]
+
 
 @lru_cache(None)
 def get_population_count(population: int, days: int, status: int) -> int:
